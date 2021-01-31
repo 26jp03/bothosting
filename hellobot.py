@@ -1,7 +1,7 @@
 import discord
 import openpyxl
 import asyncio
-
+import os
 
 client = discord.Client()
 
@@ -25,5 +25,7 @@ async def on_message(message):
     if message.content.startswith("ㅎㅇ"):
         msg = '{0.author.mention} 어서오세요 #🔔규칙방🔔 봐주시고 #💬수다방💬 에서 소통하세요'.format(message)
         await message.channel.send(msg)
-
-client.run("ODA1MzU3MjE1MzM4MzMyMTcw.YBZtWg.02IZ1CJf1Xf5QQWZoQj3OawG1oI")
+        
+        
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
