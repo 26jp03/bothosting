@@ -29,7 +29,8 @@ async def on_message(message):
     if message.content.startswith("ㅂ/사진목록"):
         one = "빵신사진"
         two = "바보"
-        await message.channel.send(str(one)+'과 '+str(two))
+        three = "이불"
+        await message.channel.send(str(one)+', '+str(three)+'과 '+str(two))
     
     if message.content.startswith("ㅂ/사진"):
         pic = message.content.split(" ")[1]
